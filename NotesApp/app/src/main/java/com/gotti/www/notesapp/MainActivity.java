@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         if (bottomNavigationView != null) {
 
             Menu menu = bottomNavigationView.getMenu();
-            selectFragment(menu.getItem(0));
+            selectFragment(menu.getItem(2));
 
             bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
