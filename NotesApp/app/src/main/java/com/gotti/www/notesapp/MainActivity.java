@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         /*
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -46,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
-
     }
+
     private void selectFragment (MenuItem item){
         item.setChecked(true);
         switch (item.getItemId()) {
             case R.id.navigation_mic:
                 break;
             case R.id.navigation_camera:
+                pushFragment(new CamFragment());
                break;
             case R.id.navigation_notes:
                 pushFragment(new NotesFragment());
@@ -78,10 +79,6 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.main_frame_layout, fragment);
                 fragmentTransaction.commit();
             }
-
-
         }
-
-
     }
 }
